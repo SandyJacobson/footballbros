@@ -65,7 +65,7 @@ https://lucid.app/invitations/accept/103c533f-a122-4e5d-b327-bef23864ffa0
  https://whimsical.com/FAxHAvXTdA4RTRz4e2rWrA
 
 #### Component Hierarchy
-
+```
 src
 |__ App/
 |__ components/
@@ -87,7 +87,7 @@ src
       |__ Players.jsx
       |__ Teams.jsx
       |__ Team.jsx
-
+```
 
 #### Component Breakdown
 

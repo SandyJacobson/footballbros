@@ -91,10 +91,9 @@ src
 
 #### Component Breakdown
 
-|  Component   |    Type    | state | props | Description                                                      |
-| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
+|  Component   |    Type    | state | props | description  | 
+| :----------: | :--------: | :---: | :---: | :-----------:|
 |    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Footer  | functional |   n   |   n   | _The footer will provide contact details._       |
 |   MainContainer    |   functional    |   y   |   y   | _Will container the original API call to get all players._      |
 | Players | functional |   y   |   y   | _Contain API call to get indiviual players as well as create new ones._                 |
 |    PlayersDetails    | functional |   y   |   y  | _Will contain function to edit and delete players._ |

@@ -87,7 +87,7 @@ src
       |__ Players.jsx
       |__ Teams.jsx
       |__ Team.jsx
-```
+
 
 #### Component Breakdown
 

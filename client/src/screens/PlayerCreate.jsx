@@ -12,7 +12,7 @@ const PlayerCreate = (props) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ [name]: value })
+    setFormData({ ...formData, [name]: value })
   }
 
   return (
@@ -43,7 +43,7 @@ const PlayerCreate = (props) => {
         Image:
         <input
           type="text"
-          name='image'
+          name='img_url'
           value={formData.img_url}
           onChange={handleChange}
         />
@@ -66,7 +66,7 @@ const PlayerCreate = (props) => {
           onChange={handleChange}
         />
       </label>
-      <button>Create</button>
+      <button>Submit</button>
     </form>
   )
 }

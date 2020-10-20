@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getAllTeams } from "../services/teams";
-import { getAllPlayers, postPlayer, putPlayer } from "../services/players";
+import { destroyPlayer, getAllPlayers, postPlayer, putPlayer } from "../services/players";
 import { Route, Switch, useHistory } from "react-router-dom";
 import Teams from "../screens/Teams";
 import Players from "../screens/Players";
@@ -42,6 +42,14 @@ const MainContainer = () => {
     history.push("/players");
   };
 
+  const deletePlayer = async (id) => {
+    await destroyPlayer(id);
+    setPlayers(prevState => prevState.filter(player => {
+      return player.id !== id
+    }))
+    history.push('/players');
+  }
+
   return (
     <Switch>
       <Route path="/teams">
@@ -57,7 +65,7 @@ const MainContainer = () => {
         <PlayerDetail teams={teams} />
       </Route>
       <Route path="/players">
-        <Players players={players} />
+        <Players players={players} deletePlayer={deletePlayer} />
       </Route>
     </Switch>
   );

@@ -33,7 +33,7 @@ const PlayerCreate = (props) => {
       <label>
         Number:
         <input
-          type='number'
+          type="text"
           name='number'
           value={formData.number}
           onChange={handleChange}
@@ -52,7 +52,7 @@ const PlayerCreate = (props) => {
         Real Team:
         <input
           type="text"
-          name='real-team'
+          name='real_team'
           value={formData.real_team}
           onChange={handleChange}
         />
@@ -61,7 +61,7 @@ const PlayerCreate = (props) => {
         Fantasy Team:
         <input
           type="text"
-          name='fantasy-team'
+          name='fantasy_team'
           value={formData.fantasy_team}
           onChange={handleChange}
         />
@@ -71,4 +71,4 @@ const PlayerCreate = (props) => {
   )
 }
 
-export default PlayerCreate
+export default PlayerCreate;

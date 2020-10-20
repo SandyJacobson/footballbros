@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Players = (props) => {
-  const { players } = props;
+  const { players, deletePlayer } = props;
+  const history = useHistory();
+
   return (
     <div>
       <h3>Players</h3>
@@ -22,7 +24,10 @@ const Players = (props) => {
           <Link to={`/players/${player.id}/edit`}>
             <button>Edit</button>
           </Link>
-          <button>Delete</button>
+          <button onClick={() => {
+            deletePlayer(player.id);
+            history.push('/')
+          }}>Delete</button>
         </div>
       ))}
       <Link to="/players/new">

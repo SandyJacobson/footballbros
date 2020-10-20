@@ -7,7 +7,7 @@ const Header = (props) => {
   return (
     <div>
       <h1>Football Bros</h1>
-      <img src='https://www.profootballnetwork.com/wp-content/uploads/2020/05/fantasy-football.jpg' alt='Fantasy Football Logo'/>
+      {/* <img src='https://www.profootballnetwork.com/wp-content/uploads/2020/05/fantasy-football.jpg' alt='Fantasy Football Logo'/> */}
       {
         currentUser ?
           <>

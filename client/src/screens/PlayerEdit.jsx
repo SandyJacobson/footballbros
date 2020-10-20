@@ -17,8 +17,8 @@ const PlayerEdit = (props) => {
     const prefillFormData = () => {
       // We already have the player info that we need in our list of players
       // we can use ".find" to select the single player from the list by its id
-      const { name } = players.find(player => player.id === Number(id));
-      setFormData({ name });
+      const { name, number, img_url, real_team, fantasy_team } = players.find(player => player.id === Number(id));
+      setFormData({ name, number, img_url, real_team, fantasy_team });
     }
     // in react, child component will finish loading before the parents
     // as a result, this component will render before the have our players list
@@ -72,7 +72,7 @@ const PlayerEdit = (props) => {
         Real Team:
         <input
           type="text"
-          name='real-team'
+          name='real_team'
           value={formData.real_team}
           onChange={handleChange}
         />
@@ -81,12 +81,12 @@ const PlayerEdit = (props) => {
         Fantasy Team:
         <input
           type="text"
-          name='fantasy-team'
+          name='fantasy_team'
           value={formData.fantasy_team}
           onChange={handleChange}
         />
       </label>
-      <button>Create</button>
+      <button>Submit</button>
     </form>
   )
 }

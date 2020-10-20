@@ -37,6 +37,14 @@ const PlayerDetail = (props) => {
         player &&
         <>
           <h3>{player.name}</h3>
+          <div className="player-detail-pictures">
+            <img src={player.img_url} alt={player.name} />
+          </div>
+          <div className='player-details'>
+            <p>{player.name} #{player.number}</p>
+            <p>NFL Team: {player.real_team}</p>
+            <p>Fantasy Team: {player.fantasy_team}</p>
+            </div>
           {player.teams.map(team => (
             <p key={team.id}>{team.name}</p>
           ))}

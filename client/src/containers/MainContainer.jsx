@@ -81,11 +81,11 @@ const MainContainer = () => {
       <Route path="/players">
         <Players players={players} deletePlayer={deletePlayer} />
       </Route>
-      <Route path="/teams">
-        <Teams teams={teams} deleteTeam={deleteTeam}/>
-      </Route>
       <Route path="/teams/new">
         <TeamCreate handleTeamCreate={handleTeamCreate}  />
+      </Route>
+      <Route path="/teams">
+        <Teams teams={teams} deleteTeam={deleteTeam}/>
       </Route>
     </Switch>
   );

@@ -11,7 +11,9 @@ export const getOneTeam = async (id) => {
 }
 
 export const postTeam = async (teamData) => {
-  const resp = await api.post('/teams', {team: teamData});
+  console.log(teamData)
+  const resp = await api.post('/teams', { team: teamData });
+  console.log(resp)
   return resp.data;
 }
 

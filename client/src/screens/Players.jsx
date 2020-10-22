@@ -22,9 +22,9 @@ const Players = (props) => {
             <p>Fantasy Team: {player.fantasy_team}</p>
             </div>
           <Link to={`/players/${player.id}/edit`}>
-            <button>Edit</button>
+            <button className='button'>Edit</button>
           </Link>
-          <button className='delete-button' onClick={() => {
+          <button className='button' onClick={() => {
             deletePlayer(player.id);
             history.push('/')
           }}>Delete</button>

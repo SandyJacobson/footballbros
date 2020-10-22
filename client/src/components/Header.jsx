@@ -1,12 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Header.css'
 
 const Header = (props) => {
   const { currentUser, handleLogout } = props;
 
   return (
-    <div>
-      <h1>Football Bros</h1>
+    <div className='header'>
+      <div className='title'>
+        <h1>Football Bros</h1>
+      </div>
+      <div className='players-teams'>
+      {
+        currentUser &&
+        <>
+          <Link to='/players'>Players</Link>
+          <Link to='/teams'>Teams</Link>
+        </>
+        }
+      </div>
+      <div className='logout'>
       {
         currentUser ?
           <>
@@ -15,15 +28,9 @@ const Header = (props) => {
           </>
           :
           <Link to='/login'>Login/Register</Link>
-      }
+        }
+        </div>
       <hr />
-      {
-        currentUser &&
-        <>
-          <Link to='/players'>Players</Link>
-          <Link to='/teams'>Teams</Link>
-        </>
-      }
     </div>
   )
 }

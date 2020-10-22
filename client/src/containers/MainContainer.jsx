@@ -4,6 +4,7 @@ import { destroyPlayer, getAllPlayers, postPlayer, putPlayer } from "../services
 import { Route, Switch, useHistory } from "react-router-dom";
 import Teams from "../screens/Teams";
 import TeamCreate from "../screens/TeamCreate";
+import TeamEdit from "../screens/TeamEdit";
 import Players from "../screens/Players";
 import PlayerCreate from "../screens/PlayerCreate";
 import PlayerEdit from "../screens/PlayerEdit";
@@ -65,6 +66,16 @@ const MainContainer = () => {
     history.push('/teams');
   }
 
+  const handleTeamEdit = async (id, teamData) => {
+    const updatedTeam = await putTeam(id, teamData);
+    setTeams((prevState) =>
+      prevState.map((team) => {
+        return team.id === Number(id) ? updatedTeam : team;
+      })
+    );
+    history.push("/teams");
+  };
+
 
 
   return (
@@ -83,6 +94,9 @@ const MainContainer = () => {
       </Route>
       <Route path="/teams/new">
         <TeamCreate handleTeamCreate={handleTeamCreate}  />
+      </Route>
+      <Route path="/teams/:id/edit">
+        <TeamEdit handleTeamEdit={handleTeamEdit} teams={teams} />
       </Route>
       <Route path="/teams">
         <Teams teams={teams} deleteTeam={deleteTeam}/>

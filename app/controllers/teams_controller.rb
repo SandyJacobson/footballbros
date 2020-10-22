@@ -11,7 +11,7 @@ class TeamsController < ApplicationController
 
   # GET /teams/1
   def show
-    render json: @team
+    render json: @team, include: :players
   end
 
   # POST /teams

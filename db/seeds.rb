@@ -38,4 +38,3 @@ puts "#{Player.count} players created"
 @squirrelrings = Team.create!(name: 'Squirrel3Rings', manager: 'Jack Duffy', img_url: 'https://neuroparadox.files.wordpress.com/2012/03/irish-drunk.jpg', user: @user)
 puts "#{Team.count} teams created"
 
-@hebrew_hammaah.players.push(@pat_mahomes)

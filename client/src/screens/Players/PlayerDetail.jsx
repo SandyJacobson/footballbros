@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { addTeam, getOnePlayer } from '../services/players';
+import { addTeam, getOnePlayer } from '../../services/players';
 
 const PlayerDetail = (props) => {
   const [player, setPlayer] = useState(null);

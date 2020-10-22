@@ -8,7 +8,7 @@ const Header = (props) => {
   return (
     <div className='header'>
       <div className='title'>
-        <h1>Football Bros</h1>
+        <Link to='/'><h1>Football Bros</h1></Link>
       </div>
       <div className='players-teams'>
       {

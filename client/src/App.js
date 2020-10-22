@@ -57,7 +57,7 @@ function App() {
         </Route>
         <Route path='/'>
           <MainContainer />
-        </Route>
+          </Route>
       </Switch>
     </Layout>
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
+import './Players.css'
 
 const Players = (props) => {
   const { players, deletePlayer } = props;

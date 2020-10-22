@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { getAllTeams, destroyTeam, postTeam, putTeam } from "../services/teams";
 import { destroyPlayer, getAllPlayers, postPlayer, putPlayer } from "../services/players";
 import { Route, Switch, useHistory } from "react-router-dom";
-import Teams from "../screens/Teams";
-import TeamCreate from "../screens/TeamCreate";
-import TeamEdit from "../screens/TeamEdit";
-import Players from "../screens/Players";
-import PlayerCreate from "../screens/PlayerCreate";
-import PlayerEdit from "../screens/PlayerEdit";
-import PlayerDetail from "../screens/PlayerDetail";
+import Teams from "../screens/Teams/Teams";
+import TeamCreate from "../screens/Teams/TeamCreate";
+import TeamEdit from "../screens/Teams/TeamEdit";
+import TeamDetails from "../screens/Teams/TeamDetails";
+import Players from "../screens/Players/Players";
+import PlayerCreate from "../screens/Players/PlayerCreate";
+import PlayerEdit from "../screens/Players/PlayerEdit";
+import PlayerDetail from "../screens/Players/PlayerDetail";
 
 const MainContainer = () => {
   const [players, setPlayers] = useState([]);
@@ -97,6 +98,9 @@ const MainContainer = () => {
       </Route>
       <Route path="/teams/:id/edit">
         <TeamEdit handleTeamEdit={handleTeamEdit} teams={teams} />
+      </Route>
+      <Route path="/teams/:id">
+        <TeamDetails players={players} />
       </Route>
       <Route path="/teams">
         <Teams teams={teams} deleteTeam={deleteTeam}/>

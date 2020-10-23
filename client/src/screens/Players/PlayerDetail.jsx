@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { getOnePlayer } from '../../services/players';
 import { updatePlayer } from '../../services/teams';
+import './PlayerDetail.css'
 
 const PlayerDetail = (props) => {
   const [player, setPlayer] = useState(null);
@@ -43,6 +44,7 @@ const PlayerDetail = (props) => {
       {
         player &&
         <>
+          <div className='single-player-div'>
           <h3>{player.name}</h3>
           <div className="player-detail-pictures">
             <img src={player.img_url} alt={player.name} />
@@ -67,10 +69,11 @@ const PlayerDetail = (props) => {
                 // we track the team's id as the "value" which will get added to state onChange
                 // the team's name goes between the open and close tag which is what the user sees
                 <option value={team.name} key={team.id}>{team.name}</option>
-              ))}
+              ))} 
             </select>
             <button>add</button>
-          </form>
+            </form>
+            </div>
         </>
       }
     </div>

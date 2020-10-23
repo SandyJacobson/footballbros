@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css'
+import './Nav.css'
 
 const Header = (props) => {
   const { currentUser, handleLogout } = props;
@@ -14,7 +14,8 @@ const Header = (props) => {
       {
         currentUser &&
         <>
-          <Link to='/players'>Players</Link>
+            <Link to='/players'>Players</Link>
+            <br/>
           <Link to='/teams'>Teams</Link>
         </>
         }

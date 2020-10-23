@@ -7,11 +7,11 @@ const Players = (props) => {
   const history = useHistory();
 
   return (
-    <div>
+    <div className='player-container'>
       <h3>Players</h3>
 
       {players.map((player) => (
-        <div key={player.id}>
+        <div className='single-player' key={player.id}>
           <div className="player-pictures">
             <img src={player.img_url} alt={player.name} />
           </div>

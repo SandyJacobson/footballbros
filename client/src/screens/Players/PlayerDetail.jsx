@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { addTeam, getOnePlayer } from '../../services/players';
+import { useParams, useHistory } from 'react-router-dom';
+import { getOnePlayer } from '../../services/players';
+import { updatePlayer } from '../../services/teams';
 
 const PlayerDetail = (props) => {
   const [player, setPlayer] = useState(null);
   const [teamId, setTeamId] = useState('')
-  const { teams } = props;
+  const { teams, players, setPlayers } = props;
   // We can grab the id of the one player from the url params
   const { id } = useParams();
+  const history = useHistory();
 
   // In the useEffect, we make an api call to get the one player and set it in local state
   useEffect(() => {
@@ -20,15 +22,20 @@ const PlayerDetail = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const playerItem = await addTeam(id, teamId);
-    setPlayer(playerItem);
+    const updatedPlayer = await updatePlayer(player.id, player);
+    console.log(updatedPlayer)
+    const playersMap = players.map(player => player.id === updatedPlayer.id ? player = updatedPlayer : player) 
+    setPlayers(playersMap)
+    history.push('/players')
   }
   
   // this is the handleChange for the select drop down
   // since this form only has one value, we do not need a variable name for the key
   const handleChange = (e) => {
     const { value } = e.target;
-    setTeamId(value);
+    console.log(value)
+    // setTeamId(value);
+    setPlayer({ ...player, fantasy_team : value })
   }
 
   return (
@@ -59,7 +66,7 @@ const PlayerDetail = (props) => {
               {teams.map(team => (
                 // we track the team's id as the "value" which will get added to state onChange
                 // the team's name goes between the open and close tag which is what the user sees
-                <option value={team.id} key={team.id}>{team.name}</option>
+                <option value={team.name} key={team.id}>{team.name}</option>
               ))}
             </select>
             <button>add</button>

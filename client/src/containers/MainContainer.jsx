@@ -88,7 +88,7 @@ const MainContainer = () => {
         <PlayerEdit handlePlayerEdit={handlePlayerEdit} players={players} />
       </Route>
       <Route path="/players/:id">
-        <PlayerDetail teams={teams} />
+        <PlayerDetail teams={teams} players={players} setPlayers={setPlayers}/>
       </Route>
       <Route path="/players">
         <Players players={players} deletePlayer={deletePlayer} />

@@ -25,7 +25,7 @@ export const destroyPlayer = async (id) => {
   return resp;
 }
 
-export const addTeam = async(playerId, teamId) => {
-  const resp = await api.put(`/teams/${teamId}/players/${playerId}`);
+export const addTeam = async(teamId) => {
+  const resp = await api.put(`/teams/${teamId}`);
   return resp.data;
 }

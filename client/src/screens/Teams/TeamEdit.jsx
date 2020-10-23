@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './TeamEdit.css'
 
 const TeamEdit = (props) => {
   const [formData, setFormData] = useState({
@@ -26,40 +27,48 @@ const TeamEdit = (props) => {
   }
 
   return (
-    <form onSubmit={(e) => {
+    <div className='team-edit'>
+    <form className='team-edit-form' onSubmit={(e) => {
       e.preventDefault();
       handleTeamEdit(id, formData);
     }}>
       <h3>Edit Team</h3>
       <label>
-        Name:
+          Name:
         <input
+          className='team-name'
           type="text"
           name='name'
           value={formData.name}
           onChange={handleChange}
         />
-      </label>
+        </label>
+        <br/>
       <label>
-        Image:
+          Image:
         <input
+          className='image'
           type="text"
           name='img_url'
           value={formData.img_url}
           onChange={handleChange}
         />
-      </label>
+        </label>
+        <br/>
       <label>
-        Manager:
+          Manager:
         <input
+          className='manager'
           type="text"
           name='manager'
           value={formData.manager}
           onChange={handleChange}
         />
       </label>
-      <button>Submit</button>
-    </form>
+      <br/>
+      <button className='submit-team-edit'>Submit</button>
+      </form>
+      </div>
   )
 }
 

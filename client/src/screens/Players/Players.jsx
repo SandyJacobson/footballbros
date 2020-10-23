@@ -9,7 +9,7 @@ const Players = (props) => {
   return (
     <div className='player-container'>
       <h3>Players</h3>
-
+      <br/>
       {players.map((player) => (
         <div className='single-player' key={player.id}>
           <div className="player-pictures">

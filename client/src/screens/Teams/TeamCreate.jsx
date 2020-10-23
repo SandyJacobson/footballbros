@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './TeamCreate.css'
 
 const TeamCreate = (props) => {
   const [formData, setFormData] = useState({
@@ -14,40 +15,48 @@ const TeamCreate = (props) => {
   }
 
   return (
-    <form onSubmit={(e) => {
+    <div className='team-create'>
+    <form className='team-create-form' onSubmit={(e) => {
       e.preventDefault();
       handleTeamCreate(formData);
     }}>
       <h3>Create Team</h3>
       <label>
-        Name:
+          Name:
         <input
+          className='team-name'
           type="text"
           name='name'
           value={formData.name}
           onChange={handleChange}
         />
-      </label>
+        </label>
+        <br/>
       <label>
-        Image:
+          Image:
         <input
+          className='image'
           type="text"
           name='img_url'
           value={formData.img_url}
           onChange={handleChange}
         />
-      </label>
+        </label>
+        <br/>
       <label>
-        Manager:
+          Manager:
         <input
+          className='manager'
           type="text"
           name='manager'
           value={formData.manager}
           onChange={handleChange}
         />
       </label>
-      <button>Submit</button>
-    </form>
+      <br/>
+      <button className='submit-team-create'>Submit</button>
+      </form>
+      </div>
   )
 }
 

@@ -1,0 +1,47 @@
+.player-create {
+  display: flex;
+  justify-content: center;
+  padding: 0 30px;
+  margin: 20px auto;
+}
+
+.player-create-form {
+  background-color: #eef2f4;
+  border: 1px solid #a9a9a9;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 7px;
+  width: 355px;
+}
+
+.name {
+  margin-left: 55px;
+}
+
+.image {
+  margin-left: 55px;
+}
+
+.real-team {
+  margin-left: 25px;
+}
+
+.number {
+  margin-left: 41px;
+}
+
+.submit-player-create {
+ margin-left: 140px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 760px) {
+  .player-create {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    margin-top: 100px;
+  }
+}

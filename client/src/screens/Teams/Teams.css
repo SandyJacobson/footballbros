@@ -1,0 +1,15 @@
+.teams-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.single-team {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: gray;
+    border-width: thin;
+    margin-top: 20px;
+    background-color: rgba(91, 140, 173)
+}

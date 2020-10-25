@@ -34,7 +34,6 @@ const PlayerDetail = (props) => {
   // since this form only has one value, we do not need a variable name for the key
   const handleChange = (e) => {
     const { value } = e.target;
-    console.log(value)
     // setTeamId(value);
     setPlayer({ ...player, fantasy_team : value })
   }

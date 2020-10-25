@@ -1,14 +1,15 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
+import './Teams.css'
 
 const Teams = (props) => {
   const { teams, deleteTeam } = props;
   const history = useHistory();
   return (
-    <div>
+    <div className='teams-container'>
       <h3>Teams</h3>
       {teams.map((team) => (
-        <div className="Team-data" key={team.id}>
+        <div className="single-team" key={team.id}>
           <div className="manager-img">
             <img src={team.img_url} alt={team.manager} />
           </div>

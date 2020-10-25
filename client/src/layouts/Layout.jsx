@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from '../components/Header'
+import Nav from '../components/Nav'
 
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
     <div className="App">
-      <Header
+      <Nav
         currentUser={currentUser}
         handleLogout={handleLogout}
       />

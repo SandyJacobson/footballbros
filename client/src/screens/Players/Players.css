@@ -18,6 +18,11 @@ img{
   border-color: gray;
   border-width: thin;
   margin-top: 20px;
+  background-color:  rgba(200, 56, 21)
+}
+
+body {
+  background-color: rgba(7, 13, 25)
 }
 
 /* button {
@@ -29,3 +34,17 @@ img{
   display: inline-block;
   font-size: 16px;
 } */
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .player-container {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    margin-top: 100px;
+  }
+}

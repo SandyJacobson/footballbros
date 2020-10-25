@@ -17,7 +17,7 @@ const PlayerCreate = (props) => {
   };
 
   return (
-    <div className='player-create'>
+    <div className="player-create">
       <form
         className="player-create-form"
         onSubmit={(e) => {
@@ -83,7 +83,7 @@ const PlayerCreate = (props) => {
         <br />
         <button className="submit-player-create">Submit</button>
       </form>
-      </div>
+    </div>
   );
 };
 

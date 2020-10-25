@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
 import { addPlayer, getOneTeam } from '../../services/teams';
 import './TeamDetails.css'
+
 
 const TeamDetails = (props) => {
   const [team, setTeam] = useState(null);
   // const [playerId, setPlayerId] = useState('')
-  const { players } = props;
+  // const { players } = props;
   const { id } = useParams();
 
   useEffect(() => {

@@ -9,7 +9,7 @@ const Nav = (props) => {
     <div className="nav">
       <div className="title">
         <Link to="/">
-          <h1>Football Bros</h1>
+          <h1 className='title'>Football Bros</h1>
         </Link>
       </div>
       <div className="players-teams">

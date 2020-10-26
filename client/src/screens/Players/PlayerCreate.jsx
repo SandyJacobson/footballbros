@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./PlayerCreate";
+import "./PlayerCreate.css";
 
 const PlayerCreate = (props) => {
   const [formData, setFormData] = useState({
@@ -53,7 +53,7 @@ const PlayerCreate = (props) => {
           <input
             className="image"
             type="text"
-            name="image"
+            name="img_url"
             value={formData.img_url}
             onChange={handleChange}
           />

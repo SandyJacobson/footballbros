@@ -4,3 +4,17 @@
   align-items: center;
   background-color: rgba(200, 56, 21);
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a :hover {
+  background-color: white;
+}
+
+button {
+  width: 50px;
+}
+

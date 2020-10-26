@@ -6,7 +6,6 @@ import "./PlayerDetail.css";
 
 const PlayerDetail = (props) => {
   const [player, setPlayer] = useState(null);
-  const [teamId, setTeamId] = useState("");
   const { teams, players, setPlayers } = props;
   // We can grab the id of the one player from the url params
   const { id } = useParams();
@@ -36,7 +35,6 @@ const PlayerDetail = (props) => {
   // since this form only has one value, we do not need a variable name for the key
   const handleChange = (e) => {
     const { value } = e.target;
-    // setTeamId(value);
     setPlayer({ ...player, fantasy_team: value });
   };
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./PlayerCreate";
+import "./PlayerCreate.css";
 
 const PlayerCreate = (props) => {
   const [formData, setFormData] = useState({
@@ -17,7 +17,7 @@ const PlayerCreate = (props) => {
   };
 
   return (
-    <div className='player-create'>
+    <div className="player-create">
       <form
         className="player-create-form"
         onSubmit={(e) => {
@@ -53,7 +53,7 @@ const PlayerCreate = (props) => {
           <input
             className="image"
             type="text"
-            name="image"
+            name="img_url"
             value={formData.img_url}
             onChange={handleChange}
           />
@@ -83,7 +83,7 @@ const PlayerCreate = (props) => {
         <br />
         <button className="submit-player-create">Submit</button>
       </form>
-      </div>
+    </div>
   );
 };
 

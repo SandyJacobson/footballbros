@@ -22,6 +22,10 @@
 
 _**FootballBros** is a full stack site that allows fantasy football fanatics to track their teams and leagues. You'll be able to add/delete/update players as well as teams._
 
+https://footballbros.netlify.app/
+https://footballbros-api.herokuapp.com/
+
+
 
 <br>
 
@@ -59,6 +63,8 @@ _The **FootballBros** MVP is to have a full full stack app that has both back an
 #### Wireframes
 
 https://lucid.app/invitations/accept/103c533f-a122-4e5d-b327-bef23864ffa0
+
+Mobile - https://whimsical.com/JdpxekAEhZA6bMsibbKWji
 
 #### Component Tree
 
